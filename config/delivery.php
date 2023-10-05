@@ -5,7 +5,7 @@ use Illuminate\Support\ServiceProvider;
 
 return [
 
-    'price' => [
+    'parameters' => [
         'letter' => env('PRICE_PARCEL_LETTER'),
         'box' => env('PRICE_PARCEL_BOX'),
         'small' => env('PRICE_SIZE_SMALL'),

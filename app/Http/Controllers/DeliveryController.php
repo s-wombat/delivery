@@ -6,36 +6,8 @@ use Illuminate\Http\Request;
 
 class DeliveryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        return 400;
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-
-    }
-
     public function calculation(Request $request)
     {
-        // $numbers = ['one', 'two', 4 => 'three', 'four'];
-        // dd($numbers[5]);
-        // // echo $a;
-
         $validated = $request->validate([
             'description' => 'required|string|max:255',
             'parcel_type' => 'required|string|max:255',
@@ -45,7 +17,7 @@ class DeliveryController extends Controller
         ]);
 
         array_walk_recursive($validated, function(&$value, $key) {
-            $conf = config('delivery.price');
+            $conf = config('delivery.parameters');
 
             if (array_key_exists($value, $conf)) {
                 $value = $conf[$value];
