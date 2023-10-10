@@ -23,12 +23,3 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN curl -sS https://getcomposer.org/installer | php -- \
     --filename=composer \
     --install-dir=/usr/local/bin
-
-# ADD . /var/www
-
-# RUN addgroup -g 1000 -S www && \
-#     adduser -u 1000 -S www -G www,
-
-# COPY --chown=www:www . /var/www
-
-# USER www
