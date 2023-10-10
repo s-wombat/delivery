@@ -2,7 +2,8 @@ Delivery calculation
 Веб-сервис для расчета стоимости доставки.
 
 Запуск приложения:
-docker-compose up -d
+1. Выполнить: docker-compose up -d
+2. Установить composer пакеты: composer install
 
 Функциональность сервиса:
  - Прием запроса
